@@ -1,0 +1,86 @@
+package TalonarioConsola.services;
+
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import TalonarioConsola.Conexion2.ConexionMySQL;
+import TalonarioConsola.model.Talonario;
+
+public class TalonarioServiceImpl implements ITalonarioservice {
+
+	
+	
+
+		
+		
+		
+	
+		
+		
+		
+	
+
+	@Override
+	public boolean guardar(Talonario talonario) {
+	    ConexionMySQL conexion = new ConexionMySQL();
+	    Connection con = conexion.getConexion();
+	    
+	    // No incluimos el ID porque en MySQL es Auto_Increment
+	    String sql = "INSERT INTO talonario (carnet, descripcion, fecha, estado) VALUES (?, ?, ?, ?)";
+	    
+	    try (PreparedStatement ps = con.prepareStatement(sql)) {
+	        ps.setString(1, talonario.getCarnet());
+	        ps.setString(2, talonario.getDescripcion());
+	        ps.setString(3, talonario.getFecha());
+	        ps.setString(4, talonario.getEstado());
+	        
+	        ps.executeUpdate();
+	        System.out.println("✅ ¡Datos enviados a MySQL con éxito!");
+	        return true;
+	    } catch (SQLException e) {
+	        System.out.println("❌ Error al guardar: " + e.getMessage());
+	        return false;
+	    } finally {
+	        conexion.close();
+	    }
+	}
+
+	@Override
+	public Talonario recuperar(Talonario talonario) {
+		Talonario tal = new Talonario();
+		
+		return tal;
+	}
+
+	@Override
+	public Talonario modificar(Talonario talonario) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean eliminar(Talonario talonario) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+
+
+
+	@Override
+	public List<Talonario> recuperarTalonarios() {
+		
+		List<Talonario> talonarios = null;
+		
+		return talonarios;
+	}
+
+	
+
+	
+	
+}
