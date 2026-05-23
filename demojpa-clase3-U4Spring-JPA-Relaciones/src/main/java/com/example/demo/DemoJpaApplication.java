@@ -1,13 +1,13 @@
-package com.trips;
+package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TripsAnApplication {
+public class DemoJpaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TripsAnApplication.class, args);
+		SpringApplication.run(DemoJpaApplication.class, args);
 	}
 
 }
