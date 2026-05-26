@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\sts-5.0.1.RELEASE\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\TripsAN-Main"/>
+			<item value="C:\sts-5.0.1.RELEASE\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\demojpa-clase3-U4Spring-JPA-Relaciones"/>
+			<item value="C:\sts-5.0.1.RELEASE\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\demoJpa"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>
